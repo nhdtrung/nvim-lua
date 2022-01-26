@@ -6,9 +6,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<,>", "<Nop>", opts)
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -27,6 +27,11 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "vv", "<C-w>v", opts)
 keymap("n", "ss", "<C-w>s", opts)
 
+-- Move back and forth through previous and next buffers
+-- with ,z and ,x
+keymap("n", ",z", ":bp<CR>", opts)
+keymap("n", ",x", ":bn<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -40,6 +45,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Splits
 keymap("n", "<v-v>", ":vsplit>", opts)
 keymap("n", "<s-s>", ":split>", opts)
+
+-- Highlight
+keymap("n", "//", ":nohlsearch<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
