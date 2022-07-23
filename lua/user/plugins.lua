@@ -17,10 +17,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost plugins.lua source <afile> | PackerSync
+augroup end
 ]]
 
 -- Use a protected call so we don't error out on first use
@@ -69,7 +69,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp"
-  use "L3MON4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
   -- snippets
@@ -103,32 +102,39 @@ return packer.startup(function(use)
   use { 'ibhagwan/fzf-lua',
   -- optional for icon support
   requires = { 'kyazdani42/nvim-web-devicons' },
-      config = function ()
-        require('fzf-lua').setup{
-          preview_opts = 'hidden',
-          fzf_colors = {
-            ['fg'] = { 'fg', 'CursorLine' },
-            ['bg'] = { 'bg', 'Normal' },
-            ['hl'] = { 'fg', 'Comment' },
-            ['fg+'] = { 'fg', 'Normal' },
-            ['bg+'] = { 'bg', 'CursorLine' },
-            ['hl+'] = { 'fg', 'Statement' },
-            ['info'] = { 'fg', 'PreProc' },
-            ['prompt'] = { 'fg', 'Conditional' },
-            ['pointer'] = { 'fg', 'Exception' },
-            ['marker'] = { 'fg', 'Keyword' },
-            ['spinner'] = { 'fg', 'Label' },
-            ['header'] = { 'fg', 'Comment' },
-            ['gutter'] = { 'bg', 'Normal' },
-            ['border'] = { 'bg', 'Normal' },
-          },
-        }
-    end
-  }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
+  config = function ()
+    require('fzf-lua').setup{
+      preview_opts = 'hidden',
+      fzf_colors = {
+        ['fg'] = { 'fg', 'CursorLine' },
+        ['bg'] = { 'bg', 'Normal' },
+        ['hl'] = { 'fg', 'Comment' },
+        ['fg+'] = { 'fg', 'Normal' },
+        ['bg+'] = { 'bg', 'CursorLine' },
+        ['hl+'] = { 'fg', 'Statement' },
+        ['info'] = { 'fg', 'PreProc' },
+        ['prompt'] = { 'fg', 'Conditional' },
+        ['pointer'] = { 'fg', 'Exception' },
+        ['marker'] = { 'fg', 'Keyword' },
+        ['spinner'] = { 'fg', 'Label' },
+        ['header'] = { 'fg', 'Comment' },
+        ['gutter'] = { 'bg', 'Normal' },
+        ['border'] = { 'bg', 'Normal' },
+      },
+    }
   end
+}
+
+-- Markdown review
+-- install without yarn or npm
+use({
+  "iamcco/markdown-preview.nvim",
+  run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if PACKER_BOOTSTRAP then
+  require("packer").sync()
+end
 end)
