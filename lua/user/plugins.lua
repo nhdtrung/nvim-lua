@@ -68,8 +68,9 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -96,6 +97,34 @@ return packer.startup(function(use)
 
   -- Markdown
   use "ellisonleao/glow.nvim"
+
+  -- FZF search
+  use { 'junegunn/fzf', run = './install --bin', }
+  use { 'ibhagwan/fzf-lua',
+  -- optional for icon support
+  requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+        require('fzf-lua').setup{
+          preview_opts = 'hidden',
+          fzf_colors = {
+            ['fg'] = { 'fg', 'CursorLine' },
+            ['bg'] = { 'bg', 'Normal' },
+            ['hl'] = { 'fg', 'Comment' },
+            ['fg+'] = { 'fg', 'Normal' },
+            ['bg+'] = { 'bg', 'CursorLine' },
+            ['hl+'] = { 'fg', 'Statement' },
+            ['info'] = { 'fg', 'PreProc' },
+            ['prompt'] = { 'fg', 'Conditional' },
+            ['pointer'] = { 'fg', 'Exception' },
+            ['marker'] = { 'fg', 'Keyword' },
+            ['spinner'] = { 'fg', 'Label' },
+            ['header'] = { 'fg', 'Comment' },
+            ['gutter'] = { 'bg', 'Normal' },
+            ['border'] = { 'bg', 'Normal' },
+          },
+        }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
