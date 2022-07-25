@@ -135,6 +135,10 @@ use({
 -- Search text 
 use "windwp/nvim-spectre"
 
+-- Toggle term
+use "akinsho/toggleterm.nvim"
+
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

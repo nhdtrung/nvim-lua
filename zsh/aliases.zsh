@@ -66,4 +66,7 @@ alias dcu='docker-compose up -d'
 alias dcr='docker-compose restart'
 alias dcd='docker-compose down'
 alias dcdv='docker-compose down -v'
-
+alias dcs='docker-compose stop'
+alias dcps='docker-compose ps -a'
+ 
+alias cdc='cd ~/code'

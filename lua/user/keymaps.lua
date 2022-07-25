@@ -97,3 +97,6 @@ keymap('n', "<Leader>E", "<cmd>:NvimTreeFindFile<CR>", opts)
 keymap('n', "<Leader>e", "<cmd>:NvimTreeToggle<CR>", opts)
 keymap('n', "<C-\\>", "<cmd>:NvimTreeFindFile<CR>", opts)
 
+-- toggle term
+keymap("n", "<Leader>t", "<cmd>:ToggleTerm<CR>", opts)
+
