@@ -93,4 +93,5 @@ keymap("n", "<Leader>sw", ":lua require('spectre').open_visual({select_word=true
 keymap("v", "<Leader>s", "<esc>:lua require('spectre').open_visual()<CR>", opts)
 
 --- nvim-tree
-keymap('n', "<C-\\>", "<cmd>:NvimTreeFindFileToggle<CR>", opts)
+keymap('n', "<Leader>E", "<cmd>:NvimTreeFindFile<CR>", opts)
+
