@@ -55,9 +55,9 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "goolord/alpha-nvim"
+--  use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
+--  use "folke/which-key.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -82,7 +82,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+--  use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
   use {

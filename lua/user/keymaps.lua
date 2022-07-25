@@ -94,4 +94,5 @@ keymap("v", "<Leader>s", "<esc>:lua require('spectre').open_visual()<CR>", opts)
 
 --- nvim-tree
 keymap('n', "<Leader>E", "<cmd>:NvimTreeFindFile<CR>", opts)
+keymap('n', "<C-\\>", "<cmd>:NvimTreeFindFile<CR>", opts)
 
