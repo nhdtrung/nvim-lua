@@ -99,31 +99,7 @@ return packer.startup(function(use)
 
   -- FZF search
   use { 'junegunn/fzf', run = './install --bin', }
-  use { 'ibhagwan/fzf-lua',
-  -- optional for icon support
-  requires = { 'kyazdani42/nvim-web-devicons' },
-  config = function ()
-    require('fzf-lua').setup{
-      preview_opts = 'hidden',
-      fzf_colors = {
-        ['fg'] = { 'fg', 'CursorLine' },
-        ['bg'] = { 'bg', 'Normal' },
-        ['hl'] = { 'fg', 'Comment' },
-        ['fg+'] = { 'fg', 'Normal' },
-        ['bg+'] = { 'bg', 'CursorLine' },
-        ['hl+'] = { 'fg', 'Statement' },
-        ['info'] = { 'fg', 'PreProc' },
-        ['prompt'] = { 'fg', 'Conditional' },
-        ['pointer'] = { 'fg', 'Exception' },
-        ['marker'] = { 'fg', 'Keyword' },
-        ['spinner'] = { 'fg', 'Label' },
-        ['header'] = { 'fg', 'Comment' },
-        ['gutter'] = { 'bg', 'Normal' },
-        ['border'] = { 'bg', 'Normal' },
-      },
-    }
-  end
-}
+  use { 'ibhagwan/fzf-lua',  requires = { 'kyazdani42/nvim-web-devicons' } }
 
 -- Markdown review
 -- install without yarn or npm
