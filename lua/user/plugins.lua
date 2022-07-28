@@ -111,6 +111,8 @@ use({
 -- Search text 
 use "windwp/nvim-spectre"
 
+use 'jremmen/vim-ripgrep'
+
 -- Toggle term
 use "akinsho/toggleterm.nvim"
 

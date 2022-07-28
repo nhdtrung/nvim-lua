@@ -13,6 +13,8 @@ elif [[ $unamestr == 'Darwin' ]]; then
   platform='darwin'
 fi
 
+alias nv="nvim ."
+
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
@@ -61,12 +63,16 @@ alias rdmr='rake db:migrate:redo'
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
-# Docker
+# Docker compose
 alias dcu='docker-compose up -d'
 alias dcr='docker-compose restart'
 alias dcd='docker-compose down'
 alias dcdv='docker-compose down -v'
 alias dcs='docker-compose stop'
 alias dcps='docker-compose ps -a'
+
+# Docker 
+alias dst='docker kill $(docker ps -q)'
+alias dps='docker ps -a'
  
 alias cdc='cd ~/code'
