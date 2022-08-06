@@ -116,6 +116,8 @@ use 'jremmen/vim-ripgrep'
 -- Toggle term
 use "akinsho/toggleterm.nvim"
 
+-- Vdebug
+use "vim-vdebug/vdebug"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
