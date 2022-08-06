@@ -100,3 +100,11 @@ keymap('n', "<C-\\>", "<cmd>:NvimTreeFindFile<CR>", opts)
 -- toggle term
 keymap("n", "<Leader>t", "<cmd>:ToggleTerm<CR>", opts)
 
+-- hop.nvim
+require'hop'.setup()
+-- normal mode (easymotion-like)
+keymap("n", "<Leader><Leader>b", "<cmd>HopWordBC<CR>", {noremap=true})
+keymap("n", "<Leader><Leader>w", "<cmd>HopWordAC<CR>", {noremap=true})
+keymap("n", "<Leader><Leader>j", "<cmd>HopLineAC<CR>", {noremap=true})
+keymap("n", "<Leader><Leader>k", "<cmd>HopLineBC<CR>", {noremap=true})
+

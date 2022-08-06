@@ -118,6 +118,9 @@ use "akinsho/toggleterm.nvim"
 
 -- Vdebug
 use "vim-vdebug/vdebug"
+    
+-- hop EasyMotion-like
+use "phaazon/hop.nvim"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
