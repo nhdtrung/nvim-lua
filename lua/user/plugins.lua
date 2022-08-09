@@ -116,11 +116,19 @@ use 'jremmen/vim-ripgrep'
 -- Toggle term
 use "akinsho/toggleterm.nvim"
 
--- Vdebug
-use "vim-vdebug/vdebug"
-    
+-- Git blame
+use 'f-person/git-blame.nvim'
+
+--  nvim-dap debugger
+use 'theHamsta/nvim-dap-virtual-text'
+use 'mfussenegger/nvim-dap'
+use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
+
 -- hop EasyMotion-like
 use "phaazon/hop.nvim"
+
+-- Docker support
+use "skanehira/denops-docker.vim"
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
