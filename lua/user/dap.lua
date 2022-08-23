@@ -1,7 +1,8 @@
 
 -- https://github.com/xdebug/vscode-php-debug/releases
 -- Extract the vsix content
-local dap = require'dap'
+local dap = require("dap")
+
 dap.adapters.php = {
     type = 'executable',
     command = 'node',
@@ -16,7 +17,7 @@ dap.configurations.php = {
         port = '9003',
         log = true,
         serverSourceRoot = '/var/www/src',
-        localSourceRoot = '/home/lenovo-legion-5/code/denimio-m2-debug/src',
+        localSourceRoot = '/home/lenovo-legion-5/code/denimio-m2/src',
     },
 }
 

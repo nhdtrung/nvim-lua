@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
+  -- use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   --  use "akinsho/toggleterm.nvim"
@@ -129,6 +129,12 @@ use "phaazon/hop.nvim"
 
 -- Docker support
 use "skanehira/denops-docker.vim"
+
+-- Auto format code
+use 'prettier/vim-prettier'
+
+-- PHP PSR support
+use 'stephpy/vim-php-cs-fixer'
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
