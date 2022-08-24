@@ -138,7 +138,13 @@ use 'stephpy/vim-php-cs-fixer'
 
 -- Scrolling
 use {
-'karb94/neoscroll.nvim'
+    'karb94/neoscroll.nvim'
+}
+
+-- Show list methods
+use {
+    'simrat39/symbols-outline.nvim',
+    config = 'require("symbols-outline").setup()',  -- optional call for configurating non-default filetypes etc
 }
 
 -- Automatically set up your configuration after cloning packer.nvim

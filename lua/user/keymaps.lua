@@ -128,3 +128,6 @@ vim.keymap.set('n', '<leader>dk', ':lua require"dap".up()<CR>zz')
 vim.keymap.set('n', '<leader>dj', ':lua require"dap".down()<CR>zz')
 vim.keymap.set('n', '<leader>dr', ':lua require"dap".repl.toggle({}, "vsplit")<CR><C-w>l')
 vim.keymap.set('n', '<leader>dc', function() require"dapui".toggle() end)
+
+-- simple outline
+vim.api.nvim_set_keymap('', '<Space>p', ":SymbolsOutline<cr>", {})
