@@ -91,6 +91,7 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+
   -- Git
   use "lewis6991/gitsigns.nvim"
 
@@ -137,15 +138,26 @@ use 'prettier/vim-prettier'
 use 'stephpy/vim-php-cs-fixer'
 
 -- Scrolling
-use {
-    'karb94/neoscroll.nvim'
-}
+use 'karb94/neoscroll.nvim'
 
 -- Show list methods
 use {
     'simrat39/symbols-outline.nvim',
     config = 'require("symbols-outline").setup()',  -- optional call for configurating non-default filetypes etc
 }
+
+-- session manage
+use {
+  'rmagatti/auto-session',
+  config = function()
+    require("auto-session").setup {
+      log_level = "error",
+      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+    }
+  end
+}
+
+use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
