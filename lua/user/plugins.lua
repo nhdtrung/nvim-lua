@@ -122,7 +122,7 @@ use 'f-person/git-blame.nvim'
 
 --  nvim-dap debugger
 use 'theHamsta/nvim-dap-virtual-text'
-use 'mfussenegger/nvim-dap'
+use { 'mfussenegger/nvim-dap', tag = '0.1.0'}
 use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
 
 -- hop EasyMotion-like
@@ -146,7 +146,7 @@ use {
     config = 'require("symbols-outline").setup()',  -- optional call for configurating non-default filetypes etc
 }
 
--- session manage
+-- Session manage
 use {
   'rmagatti/auto-session',
   config = function()
@@ -158,6 +158,19 @@ use {
 }
 
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+use { "anuvyklack/windows.nvim",
+   requires = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+   },
+   config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup()
+   end
+}
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
