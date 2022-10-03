@@ -147,15 +147,14 @@ use {
 }
 
 -- Session manage
-use {
-  'rmagatti/auto-session',
+use({
+  "folke/persistence.nvim",
+  event = "BufReadPre", -- this will only start session saving when an actual file was opened
+  module = "persistence",
   config = function()
-    require("auto-session").setup {
-      log_level = "error",
-      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-    }
-  end
-}
+    require("persistence").setup()
+  end,
+})
 
 use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
