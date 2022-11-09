@@ -60,7 +60,6 @@ return packer.startup(function(use)
   --  use "folke/which-key.nvim"
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 use 'martinsione/darkplus.nvim'
 
   -- cmp plugins
@@ -137,9 +136,6 @@ use 'prettier/vim-prettier'
 -- PHP PSR support
 use 'stephpy/vim-php-cs-fixer'
 
--- Scrolling
-use 'karb94/neoscroll.nvim'
-
 -- Show list methods
 use {
     'simrat39/symbols-outline.nvim',
@@ -164,7 +160,6 @@ use { "anuvyklack/windows.nvim",
       "anuvyklack/animation.nvim"
    },
    config = function()
-      --[[ vim.o.winwidth = 10 ]]
       --[[ vim.o.winminwidth = 10 ]]
       --[[ vim.o.equalalways = false ]]
       require('windows').setup()
