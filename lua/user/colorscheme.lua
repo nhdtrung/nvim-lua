@@ -1,9 +1,12 @@
 vim.cmd [[
 try
-  colorscheme darkplus
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+    colorscheme OceanicNext
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
+    colorscheme default
+    set background=dark
 endtry
 ]]
 
