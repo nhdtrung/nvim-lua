@@ -43,3 +43,4 @@ luac.out
 plugin/packer_compiled.lua
 
 sessions/*
+nodesource_setup.shv
