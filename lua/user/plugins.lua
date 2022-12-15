@@ -51,13 +51,9 @@ return packer.startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  --  use "akinsho/toggleterm.nvim"
-  --  use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  --  use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  --  use "folke/which-key.nvim"
 
   -- Colorschemes
 use 'mhartington/oceanic-next'
@@ -110,7 +106,6 @@ use({
 
 -- Search text 
 use "windwp/nvim-spectre"
-
 use 'jremmen/vim-ripgrep'
 
 -- Toggle term
@@ -126,9 +121,6 @@ use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
 
 -- hop EasyMotion-like
 use "phaazon/hop.nvim"
-
--- Docker support
-use "skanehira/denops-docker.vim"
 
 -- Auto format code
 use 'prettier/vim-prettier'
@@ -151,32 +143,6 @@ use({
     require("persistence").setup()
   end,
 })
-
-use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-use { "anuvyklack/windows.nvim",
-   requires = {
-      "anuvyklack/middleclass",
-      "anuvyklack/animation.nvim"
-   },
-   config = function()
-      --[[ vim.o.winminwidth = 10 ]]
-      --[[ vim.o.equalalways = false ]]
-      require('windows').setup()
-   end
-}
--- Lua
---[[ use { ]]
---[[   "folke/trouble.nvim", ]]
---[[   requires = "kyazdani42/nvim-web-devicons", ]]
---[[   config = function() ]]
---[[     require("trouble").setup { ]]
---[[       -- your configuration comes here ]]
---[[       -- or leave it empty to use the default settings ]]
---[[       -- refer to the configuration section below ]]
---[[     } ]]
---[[   end ]]
---[[ } ]]
 
 use "b0o/schemastore.nvim"
 
