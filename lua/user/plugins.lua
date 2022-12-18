@@ -85,7 +85,7 @@ use 'mhartington/oceanic-next'
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
+  use "windwp/nvim-ts-autotag" -- auto close tags
 
   -- Git
   use "lewis6991/gitsigns.nvim"
