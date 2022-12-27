@@ -27,6 +27,9 @@ easy_install3 pip
 echo "Install RG search"
 sudo apt install -y ripgrep
 
+#install trash-cli
+sudo apt install trash-cli
+
 # install zsh
 apt install -y -y zsh
 # install oh-my-zsh
