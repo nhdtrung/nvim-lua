@@ -17,6 +17,12 @@ Add:  `font_family  <font-name>` and  `bold_font <font-name>` into ~/.config/kit
 
 Run `nvim` and wait for the plugins to be installed 
 
+MacOSX
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
+
 **NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
 
 ### Get healthy
