@@ -9,10 +9,6 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
-local api = require('nvim-tree.api')
-
-api.config.mappings.default_on_attach(bufnr)
-
 
 nvim_tree.setup {
   disable_netrw = true,
